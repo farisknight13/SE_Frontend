@@ -1,0 +1,68 @@
+<div class="bg">
+    <app-header></app-header>
+    <div class="mat-elevation-z8 mt-3">
+        <mat-card>
+            <form #productForm="ngForm" (submit)="onSubmit(productForm)">
+                <mat-card-header>
+                    <!-- จัดให้ชิดขวาซ้ายได้สวยงาม -->
+                    <mat-card-title class="d-flex justify-content-between align-items-center">
+                        <span>CHECK NAME FORM</span>
+                        <button mat-button type="submit" class="button">Confirm</button>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-divider></mat-divider>
+                <mat-card-content class="py-3 px-2">
+                    <div class="row mt-2">
+                        <mat-label class="label d-flex justify-content-between align-items-center ">Student ID
+                        </mat-label>
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Studentid</mat-label>
+                                <input ngModel name="studentid" matInput required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <mat-label class="label d-flex justify-content-between align-items-center">Student Name
+                        </mat-label>
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Name</mat-label>
+                                <input ngModel name="name" matInput required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <mat-label class="label d-flex justify-content-between align-items-center">Subject</mat-label>
+                        <div class=" col-md-6">
+                            <mat-form-field class="w-100" appearance="outline">
+                                <mat-label>Select Subject</mat-label>
+                                <mat-select ngModel name="subject">
+                                    <mat-option *ngFor="let subject of subjects" [value]="subject.value">
+                                        {{subject.viewValue}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <!-- mt 2,3 ใช้เว้นว่างปุ่มต่างๆ ตกแต่ง -->
+                    <div class="row mt-3">
+                        <mat-label class="label d-flex justify-content-between align-items-center">Photo</mat-label>
+                        <div class="col-md-8" *ngIf="imagePreview">
+                            <img class="img-fluid border" [src]="imagePreview" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <!-- ดักการคลิกถ้าคลิก ปุ่ม select imge จะไป fileinput -->
+                            <button mat-stroked-button (click)="fileInput.click()" type="button">
+                                <mat-icon>photo</mat-icon>
+                                <span>Select image</span>
+                            </button>
+                            <input (change)="onPreviewImage($event)" #fileInput type="file" accept="image/*">
+                        </div>
+                    </div>
+                </mat-card-content>
+            </form>
+        </mat-card>
+    </div>
+</div>

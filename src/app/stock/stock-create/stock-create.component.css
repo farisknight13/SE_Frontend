@@ -1,0 +1,25 @@
+::ng-deep .mat-card-header-text{
+    width: 150%;
+}
+
+[type='file']{
+    display: none;
+}
+
+.button{
+    background-color: #FAB433;
+}
+.label{
+    width: 7.5%
+}
+
+.bg {
+    /* The image used */
+    background-image: url(/assets/back1.png);
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

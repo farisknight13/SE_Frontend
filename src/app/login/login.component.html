@@ -1,0 +1,44 @@
+<!-- <form class="text-center" class="frame-login">
+  <br />
+  <h2>
+    <div class="login">Login</div>
+  </h2>
+  <br /> <span class="v172_33">Use your kmitl account</span><br />
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input matInput placeholder="">
+  </mat-form-field>
+  <p></p>
+  <mat-form-field class="example-full-width">
+    <mat-label>Password</mat-label>
+    <input matInput placeholder="" input type="password">
+  </mat-form-field>
+  <div class="example-button-row">
+    <button mat-raised-button color="primary" routerLink="/stock">login</button>
+  </div>
+  <span class="forget"><a href=""><span>*If you forget your email</span></a></span>
+</form> -->
+<div class="bg">
+  <app-header></app-header>
+
+  <mat-card class="frame-login">
+    <mat-card-header class="login d-flex justify-content-center">
+      <mat-card-title class="c-font mat-display-2">
+        <span>Login</span>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-form-field class="d-flex justify-content-center align-items-center">
+      <mat-label>Enter your email*</mat-label>
+      <input matInput placeholder="">
+    </mat-form-field>
+    <mat-form-field class="d-flex justify-content-center align-items-center">
+      <mat-label>Enter your password</mat-label>
+      <input matInput placeholder="" input type="password">
+    </mat-form-field>
+    <br>
+    <div class="d-flex justify-content-center">
+      <button mat-raised-button class="button" routerLink="/stock">Login</button>
+    </div>
+  </mat-card>
+</div>

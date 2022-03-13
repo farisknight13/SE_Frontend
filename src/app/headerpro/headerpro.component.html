@@ -1,0 +1,37 @@
+<mat-toolbar class="header">
+    <img src="https://osda.kmitl.ac.th/election/assets/img/logo-go.png" alt="" style="width:50px;height:40px">
+
+    <span classs="d-flex justify-content-center">CHACK NAME</span>
+  <span class="flex-fill"></span>
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <div class="img">
+        <svg width="30" height="30" viewBox="0 0 65 77" fill="none" xmlns="http://www.w3.org/2000/svg"
+          class="img1 rounded-circle">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5.30378 18.2902C1.85676 30.9923 -2.63532 59.5438 1.94852 64.0225H30.9485C30.9515 63.971 30.9544 63.9197 30.9572 63.8685C41.7059 62.679 50.0658 53.5658 50.0658 42.5V21.5C50.0658 9.62588 40.4399 0 28.5658 0H26.5658C15.7825 0 6.85334 7.93854 5.30378 18.2902Z"
+            fill="#191847" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M38.8035 38.4901C43.4114 33.0814 46.5302 26.4529 46.009 19.0255C44.5075 -2.37502 14.7173 2.33281 8.92245 13.1339C3.12764 23.9351 3.81622 51.333 11.3055 53.2635C14.2922 54.0333 20.6548 52.1475 27.1304 48.2443L23.0658 77H47.0658L38.8035 38.4901Z"
+            fill="#B28B67" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M32.3158 34.8748C31.2101 46.7528 31.6531 60.3173 34.9485 63.5371H63.9485C65.5643 35.4635 49.9485 46.3349 49.9485 19.9028C48.9749 18.9515 48.055 18.01 47.1447 17.1981L47.1769 16.4207C42.1552 6.14023 35.7844 1 28.0644 1C16.4843 1 12.8292 6.38832 9.71712 10.9631C12.0443 18.9482 21.0754 20.1322 29.1001 25.1095C30.0459 24.341 31.2521 23.8804 32.5658 23.8804C35.6034 23.8804 38.0658 26.3428 38.0658 29.3804C38.0658 32.418 35.6034 34.8804 32.5658 34.8804C32.482 34.8804 32.3987 34.8785 32.3158 34.8748Z"
+            fill="#191847" />
+        </svg>
+        <span> Professor </span>
+      </div>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/reset">
+        <mat-icon>vpn_key</mat-icon>
+        <span>reset password</span>
+      </button>
+      <button mat-menu-item routerLink="/login">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+

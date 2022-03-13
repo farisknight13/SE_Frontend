@@ -1,0 +1,47 @@
+<div class="bg">
+    <app-headerpro></app-headerpro>
+    <div class="mat-elevation-z8 mt-3">
+        <mat-card>
+            <!-- จัดให้ชิดขวาซ้ายได้สวยงาม -->
+            <form #repasswordForm="ngForm" (submit)="onSubmit(repasswordForm)">
+                <mat-card-title class="d-flex align-items-center justify-content-center h-100">
+                    <div>Reset Password</div>
+                </mat-card-title>
+
+                <mat-divider></mat-divider>
+                <mat-card-content class="py-3 px-2">
+                    <div class="mx-auto">
+                        <div class="col">
+                            <mat-form-field class="col" appearance="outline">
+                                <mat-label>Old Password*</mat-label>
+                                <input ngModel name="oldpassword" matInput required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="mx-auto">
+                        <div class="col">
+                            <mat-form-field class="col" appearance="outline">
+                                <mat-label>New Password*</mat-label>
+                                <input ngModel name="newpassword" matInput required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="mx-auto">
+                        <div class=" col">
+                            <mat-form-field class="col" appearance="outline">
+                                <mat-label>Comfirm Password*</mat-label>
+                                <input ngModel name="confirmpassword" matInput required>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="text-center">
+                        <a href="resetsu"></a>
+                        <button mat-raised-button class="button" type="submit">Reset Password</button>
+                    </div>
+
+                </mat-card-content>
+            </form>
+        </mat-card>
+    </div>
+</div>
